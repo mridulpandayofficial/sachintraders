@@ -1,0 +1,1489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sachein Traders | Customer Support & Technology</title>
+
+    <meta name="description"
+          content="Sachein Traders provides reliable customer support, technical assistance and technology solutions for businesses.">
+
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #172033;
+    background: #ffffff;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+textarea {
+    font-family: inherit;
+}
+
+.container {
+    width: min(1120px, 92%);
+    margin: auto;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.96);
+    border-bottom: 1px solid #e8ecf2;
+}
+
+.nav-container {
+    min-height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: 800;
+    color: #102a56;
+}
+
+.logo-icon {
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    color: white;
+    font-size: 22px;
+    background: linear-gradient(135deg, #0759d9, #12b9e8);
+}
+
+.logo-blue {
+    color: #0876dd;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+}
+
+.nav-link {
+    font-size: 14px;
+    font-weight: 600;
+    color: #4e5b70;
+    transition: 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #0876dd;
+}
+
+.menu-toggle {
+    display: none;
+    border: 0;
+    background: transparent;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 680px;
+    display: flex;
+    align-items: center;
+    background:
+        radial-gradient(circle at 90% 20%, #e3f6ff, transparent 35%),
+        linear-gradient(135deg, #f8fbff, #ffffff);
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+    gap: 80px;
+}
+
+.badge,
+.section-label {
+    display: inline-block;
+    margin-bottom: 18px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #0876dd;
+}
+
+.hero h1 {
+    max-width: 700px;
+    font-size: clamp(42px, 6vw, 72px);
+    line-height: 1.05;
+    letter-spacing: -3px;
+    color: #11284e;
+}
+
+.hero h1 span,
+.section-heading h2 span,
+.why-title h2 span {
+    color: #0876dd;
+}
+
+.hero-text > p {
+    max-width: 600px;
+    margin: 28px 0;
+    font-size: 18px;
+    color: #68758a;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px;
+    padding: 0 25px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    border: 2px solid transparent;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.btn-primary {
+    color: white;
+    background: #0876dd;
+    box-shadow: 0 10px 25px rgba(8, 118, 221, 0.2);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    background: #065db0;
+}
+
+.btn-outline {
+    color: #0876dd;
+    border-color: #cbdff4;
+    background: white;
+}
+
+.btn-outline:hover {
+    border-color: #0876dd;
+}
+
+.btn-white {
+    color: #0876dd;
+    background: white;
+}
+
+.full-width {
+    width: 100%;
+}
+
+
+/* =========================
+   HERO CARD
+========================= */
+
+.hero-card {
+    padding: 55px 40px;
+    text-align: center;
+    border-radius: 24px;
+    background: white;
+    border: 1px solid #e1eaf4;
+    box-shadow: 0 25px 70px rgba(20, 60, 100, 0.12);
+}
+
+.support-icon {
+    width: 100px;
+    height: 100px;
+    display: grid;
+    place-items: center;
+    margin: 0 auto 25px;
+    border-radius: 50%;
+    font-size: 55px;
+    font-weight: 800;
+    color: white;
+    background: linear-gradient(135deg, #0759d9, #12b9e8);
+}
+
+.hero-card h3 {
+    font-size: 25px;
+    color: #142b50;
+}
+
+.hero-card p {
+    margin: 10px 0 25px;
+    color: #738096;
+}
+
+.support-number {
+    padding-top: 20px;
+    border-top: 1px solid #edf0f4;
+}
+
+.support-number span {
+    display: block;
+    font-size: 12px;
+    color: #7c8798;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.support-number a {
+    display: inline-block;
+    margin-top: 5px;
+    font-size: 24px;
+    font-weight: 800;
+    color: #0876dd;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section {
+    padding: 110px 0;
+}
+
+.section-heading {
+    max-width: 700px;
+}
+
+.section-heading.center {
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.section-heading h2,
+.why-title h2 {
+    margin-bottom: 20px;
+    font-size: clamp(34px, 5vw, 50px);
+    line-height: 1.1;
+    color: #11284e;
+}
+
+.section-heading p,
+.why-title p {
+    color: #6d788b;
+    font-size: 17px;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    margin-top: 60px;
+}
+
+.about-content h3 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #142b50;
+}
+
+.about-content p {
+    margin-bottom: 18px;
+    color: #68758a;
+}
+
+.text-link {
+    display: inline-block;
+    margin-top: 15px;
+    font-weight: 700;
+    color: #0876dd;
+}
+
+.about-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.stat-card {
+    padding: 30px;
+    border: 1px solid #e2e9f1;
+    border-radius: 12px;
+    background: #fbfdff;
+}
+
+.stat-card strong {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 35px;
+    color: #0876dd;
+}
+
+.stat-card span {
+    font-weight: 700;
+    color: #39485d;
+}
+
+
+/* =========================
+   SERVICES
+========================= */
+
+.services-section {
+    background: #f7faff;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.service-card {
+    padding: 35px 28px;
+    background: white;
+    border: 1px solid #e3eaf2;
+    border-radius: 14px;
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 40px rgba(25, 70, 110, 0.1);
+}
+
+.service-icon {
+    width: 45px;
+    height: 45px;
+    display: grid;
+    place-items: center;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 800;
+    color: white;
+    background: #0876dd;
+}
+
+.service-card h3 {
+    margin-bottom: 12px;
+    color: #142b50;
+}
+
+.service-card p {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #748095;
+}
+
+.service-card a {
+    font-size: 14px;
+    font-weight: 700;
+    color: #0876dd;
+}
+
+
+/* =========================
+   WHY US
+========================= */
+
+.why-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 100px;
+    align-items: start;
+}
+
+.why-list {
+    display: grid;
+    gap: 15px;
+}
+
+.why-item {
+    display: flex;
+    gap: 18px;
+    padding: 24px;
+    border-bottom: 1px solid #e8edf3;
+}
+
+.check {
+    flex-shrink: 0;
+    width: 34px;
+    height: 34px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    color: white;
+    background: #0876dd;
+    font-weight: bold;
+}
+
+.why-item h3 {
+    margin-bottom: 5px;
+    color: #172c4e;
+}
+
+.why-item p {
+    font-size: 14px;
+    color: #768196;
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+.cta {
+    padding: 70px 0;
+    background: linear-gradient(135deg, #0759d9, #0876dd);
+}
+
+.cta-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.cta h2 {
+    max-width: 650px;
+    color: white;
+    font-size: clamp(32px, 5vw, 50px);
+    line-height: 1.1;
+}
+
+.cta h2 span {
+    color: #aeeeff;
+}
+
+.cta p {
+    margin-top: 12px;
+    color: #d9efff;
+}
+
+.section-label.light {
+    color: #b9ecff;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-section {
+    background: #fbfcfe;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 50px;
+}
+
+.contact-info {
+    display: grid;
+    gap: 14px;
+}
+
+.contact-card {
+    display: flex;
+    gap: 18px;
+    padding: 22px;
+    border: 1px solid #e3e9f0;
+    border-radius: 12px;
+    background: white;
+}
+
+.contact-icon {
+    width: 45px;
+    height: 45px;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    border-radius: 8px;
+    color: white;
+    background: #0876dd;
+    font-size: 18px;
+}
+
+.contact-card span {
+    display: block;
+    margin-bottom: 3px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #8a94a4;
+}
+
+.contact-card a {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0876dd;
+}
+
+.contact-card p {
+    color: #47566a;
+    word-break: break-word;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.contact-form-wrapper {
+    padding: 35px;
+    border: 1px solid #e2e9f1;
+    border-radius: 14px;
+    background: white;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #34445a;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 14px 15px;
+    border: 1px solid #dce4ec;
+    border-radius: 7px;
+    outline: none;
+    font-size: 14px;
+    color: #1e2d42;
+    background: #fbfcfe;
+    transition: 0.3s;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #0876dd;
+    background: white;
+}
+
+.form-message {
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    color: #c7d2e1;
+    background: #0d1b31;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 70px;
+    padding: 70px 0;
+}
+
+.footer-logo {
+    color: white;
+}
+
+.footer p {
+    max-width: 350px;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #9eacc0;
+}
+
+.footer h4 {
+    margin-bottom: 18px;
+    color: white;
+}
+
+.footer-grid > div > a:not(.logo) {
+    display: block;
+    margin-bottom: 9px;
+    font-size: 14px;
+    color: #aab8ca;
+}
+
+.footer-grid > div > a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    padding: 20px 0;
+    border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        gap: 20px;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .hero {
+        padding: 80px 0;
+    }
+
+    .hero-card {
+        max-width: 500px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .about-grid,
+    .why-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .why-grid {
+        gap: 30px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .nav-container {
+        min-height: 68px;
+    }
+
+    .menu-toggle {
+        display: block;
+        color: #11284e;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 68px;
+        left: 0;
+        right: 0;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 10px 5%;
+        background: white;
+        border-bottom: 1px solid #e6ebf1;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+    }
+
+    .navbar.show {
+        display: flex;
+    }
+
+    .nav-link {
+        padding: 13px 0;
+        border-bottom: 1px solid #f0f2f5;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 70px 0;
+    }
+
+    .hero h1 {
+        letter-spacing: -2px;
+    }
+
+    .hero-text > p {
+        font-size: 16px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .section {
+        padding: 75px 0;
+    }
+
+    .section-heading.center {
+        margin-bottom: 40px;
+    }
+
+    .about-stats {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cta-content .btn {
+        width: auto;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .contact-form-wrapper {
+        padding: 25px 20px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+}
+
+
+@media (max-width: 400px) {
+
+    .logo {
+        font-size: 17px;
+    }
+
+    .logo-icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    .about-stats {
+        grid-template-columns: 1fr;
+    }
+
+}
+    </style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="header" id="header">
+
+    <div class="container nav-container">
+
+        <a href="#home" class="logo">
+            <span class="logo-icon">S</span>
+            <span>Sachein<span class="logo-blue">Traders</span></span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+            ☰
+        </button>
+
+        <nav class="navbar" id="navbar">
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#services" class="nav-link">Services</a>
+            <a href="#why-us" class="nav-link">Why Us</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+    <div class="container hero-content">
+
+        <div class="hero-text">
+
+            <span class="badge">CUSTOMER SUPPORT • TECHNOLOGY</span>
+
+            <h1>
+                Reliable Support.
+                <span>Smart Technology.</span>
+            </h1>
+
+            <p>
+                We help businesses stay connected, supported and productive
+                with reliable customer support and practical technology solutions.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#contact" class="btn btn-primary">
+                    Get in Touch
+                </a>
+
+                <a href="#services" class="btn btn-outline">
+                    Explore Services
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-card">
+
+            <div class="support-icon">
+                S
+            </div>
+
+            <h3>We're Here to Help</h3>
+
+            <p>
+                Professional assistance when you need it.
+            </p>
+
+            <div class="support-number">
+                <span>Call Us</span>
+                <a href="tel:9651456668">9651456668</a>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section class="section" id="about">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-label">ABOUT US</span>
+
+            <h2>
+                Technology Made
+                <span>Simple</span>
+            </h2>
+
+            <p>
+                At Sachein Traders, our focus is simple — provide dependable
+                support and useful technology solutions that help businesses
+                work better.
+            </p>
+
+        </div>
+
+
+        <div class="about-grid">
+
+            <div class="about-content">
+
+                <h3>Support You Can Rely On</h3>
+
+                <p>
+                    We understand that technology should make business easier,
+                    not more complicated. Our approach combines responsive
+                    customer service with practical technical support.
+                </p>
+
+                <p>
+                    Whether you need help with a technical issue, website,
+                    application or business technology, our team is ready
+                    to assist.
+                </p>
+
+                <a href="#contact" class="text-link">
+                    Talk to our team →
+                </a>
+
+            </div>
+
+
+            <div class="about-stats">
+
+                <div class="stat-card">
+                    <strong>01</strong>
+                    <span>Customer First</span>
+                </div>
+
+                <div class="stat-card">
+                    <strong>02</strong>
+                    <span>Reliable Support</span>
+                </div>
+
+                <div class="stat-card">
+                    <strong>03</strong>
+                    <span>Practical Solutions</span>
+                </div>
+
+                <div class="stat-card">
+                    <strong>04</strong>
+                    <span>Professional Service</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SERVICES ================= -->
+
+<section class="section services-section" id="services">
+
+    <div class="container">
+
+        <div class="section-heading center">
+
+            <span class="section-label">OUR SERVICES</span>
+
+            <h2>
+                How We Can
+                <span>Help</span>
+            </h2>
+
+            <p>
+                Simple and reliable support services designed around your
+                business needs.
+            </p>
+
+        </div>
+
+
+        <div class="services-grid">
+
+            <div class="service-card">
+
+                <div class="service-icon">01</div>
+
+                <h3>Customer Support</h3>
+
+                <p>
+                    Friendly and responsive assistance for your customers
+                    and business requirements.
+                </p>
+
+                <a href="#contact">Learn More →</a>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">02</div>
+
+                <h3>Technical Support</h3>
+
+                <p>
+                    Practical technical assistance to help solve problems
+                    and keep your systems running smoothly.
+                </p>
+
+                <a href="#contact">Learn More →</a>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">03</div>
+
+                <h3>Website Support</h3>
+
+                <p>
+                    Assistance with websites, applications and digital
+                    technology requirements.
+                </p>
+
+                <a href="#contact">Learn More →</a>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">04</div>
+
+                <h3>Business Technology</h3>
+
+                <p>
+                    Technology-focused solutions that help businesses
+                    improve their everyday operations.
+                </p>
+
+                <a href="#contact">Learn More →</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= WHY US ================= -->
+
+<section class="section" id="why-us">
+
+    <div class="container">
+
+        <div class="why-grid">
+
+            <div class="why-title">
+
+                <span class="section-label">WHY CHOOSE US</span>
+
+                <h2>
+                    A Better Way to
+                    <span>Get Support</span>
+                </h2>
+
+                <p>
+                    We believe good support starts with listening,
+                    understanding and providing the right solution.
+                </p>
+
+            </div>
+
+
+            <div class="why-list">
+
+                <div class="why-item">
+
+                    <div class="check">✓</div>
+
+                    <div>
+                        <h3>Customer Focused</h3>
+                        <p>
+                            We put your requirements and experience first.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="why-item">
+
+                    <div class="check">✓</div>
+
+                    <div>
+                        <h3>Quick Assistance</h3>
+                        <p>
+                            We aim to respond to your queries efficiently.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="why-item">
+
+                    <div class="check">✓</div>
+
+                    <div>
+                        <h3>Professional Approach</h3>
+                        <p>
+                            Clear communication and practical solutions.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="why-item">
+
+                    <div class="check">✓</div>
+
+                    <div>
+                        <h3>Technology Driven</h3>
+                        <p>
+                            Modern technology with a simple business approach.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CTA ================= -->
+
+<section class="cta">
+
+    <div class="container cta-content">
+
+        <div>
+            <span class="section-label light">NEED ASSISTANCE?</span>
+
+            <h2>
+                Let's solve your
+                <span>problem together.</span>
+            </h2>
+
+            <p>
+                Have a question or need technical assistance?
+                Get in touch with our team.
+            </p>
+        </div>
+
+        <a href="tel:9651456668" class="btn btn-white">
+            Call 9651456668
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="section contact-section" id="contact">
+
+    <div class="container">
+
+        <div class="section-heading center">
+
+            <span class="section-label">CONTACT US</span>
+
+            <h2>
+                We're Here to
+                <span>Help</span>
+            </h2>
+
+            <p>
+                Have a question? Contact us and our team will be happy
+                to assist you.
+            </p>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+
+            <!-- CONTACT INFORMATION -->
+
+            <div class="contact-info">
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">☎</div>
+
+                    <div>
+                        <span>Phone</span>
+
+                        <a href="tel:9651456668">
+                            9651456668
+                        </a>
+                    </div>
+
+                </div>
+
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">✉</div>
+
+                    <div>
+                        <span>Email</span>
+
+                        <p>
+                            support@sacheintraders.in
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">⌖</div>
+
+                    <div>
+                        <span>Website</span>
+
+                        <p>
+                            sacheintraders.in
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">◷</div>
+
+                    <div>
+                        <span>Support</span>
+
+                        <p>
+                            We're available to assist with your enquiries.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CONTACT FORM -->
+
+            <div class="contact-form-wrapper">
+
+                <form id="contactForm">
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="Enter your name"
+                                required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                placeholder="Enter phone number"
+                                required>
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="email">Email Address</label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="subject">Subject</label>
+
+                        <input
+                            type="text"
+                            id="subject"
+                            name="subject"
+                            placeholder="How can we help?">
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="message">Message</label>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="5"
+                            placeholder="Write your message..."
+                            required></textarea>
+
+                    </div>
+
+
+                    <button type="submit" class="btn btn-primary full-width">
+                        Send Message
+                    </button>
+
+
+                    <div id="formMessage" class="form-message"></div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="container footer-grid">
+
+        <div>
+
+            <a href="#home" class="logo footer-logo">
+                <span class="logo-icon">S</span>
+                <span>Sachein<span class="logo-blue">Traders</span></span>
+            </a>
+
+            <p>
+                Customer support and technology solutions
+                for modern businesses.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h4>Quick Links</h4>
+
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+
+        </div>
+
+
+        <div>
+
+            <h4>Contact</h4>
+
+            <a href="tel:9651456668">
+                9651456668
+            </a>
+
+            <a href="mailto:support@sacheintraders.in">
+                support@sacheintraders.in
+            </a>
+
+            <p>
+                sacheintraders.in
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <div class="container">
+
+            <p>
+                © <span id="year"></span> Sachein Traders.
+                All Rights Reserved.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
